@@ -32,3 +32,12 @@ final class Email
         }
     }
 }
+
+class Human{    
+    public function helloString(){
+        return "こんにちわ";
+    }
+    public function goodnightString(){
+        return "おやすみ";
+    }
+}
