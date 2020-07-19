@@ -3,11 +3,12 @@ version: '3'
 services:
   web:
     build: . #Dockerファイルのフォルダを指定する。
-    ports: #ポートを指定
-      - '8080:8080'
-      - '50000:50000'
+    # ports: #ポートを指定
+    #   - '8080:8080'
+    #   - '50000:50000'
     # volumes: #マウント先を指定する
     #   - './jenkins_home:/var/jenkins_home'
     tty: true  #これで-tの標準出力を指定
     stdin_open: true #これで-iの標準入力を指定
+    command: "bash"
 

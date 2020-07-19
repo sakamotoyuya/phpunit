@@ -196,4 +196,7 @@ docker-commandを実行するコマンド配下の通り。
   - stopしてrm
 - `docker-compose exec web bash`
   - `docker-compose exec <service> <command>`
+  - コンテナに入るコマンド。コンテナに入るコマンドはファイル内で定義できないためexecを使う必要がある。
+
+
     
