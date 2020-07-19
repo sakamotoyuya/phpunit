@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: . #Dockerファイルのフォルダを指定する。
-    # ports: #ポートを指定
+    ports: #ポートを指定
       - '8080:8080'
       - '50000:50000'
     volumes: #マウント先を指定する
