@@ -8,6 +8,10 @@ https://qiita.com/niisan-tokyo/items/8cccec88d45f38171c94
 `./vendor/bin/phpunit tests`
 
 ## dockerの構築について
+予め以下のサイトから
+以下をインストールしておく
+wget https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.gz
+
 ビルドして開始する方法
 ```
 cd ./docker/ubuntu/
@@ -18,5 +22,5 @@ docker-compose exec web bash
 停止する方法
 
 ## 備忘録
-jenkinsのインストール
+jenkinsのインストール  
 https://pkg.jenkins.io/debian-stable/

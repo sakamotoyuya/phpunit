@@ -10,5 +10,11 @@ RUN wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-
 RUN echo "deb https://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 RUN sudo apt-get update
 RUN sudo apt-get install -y jenkins
+# ADD openjdk-11+28_linux-x64_bin.tar.gz /opt/jdk/
+ENV PATH /opt/jdk/jdk-11/bin:$PATH
+RUN wget https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.gz
+RUN mkdir /opt/jdk
+RUN tar -zxvf openjdk-11+28_linux-x64_bin.tar.gz -C /opt/jdk/
+RUN rm -R openjdk-11+28_linux-x64_bin.tar.gz 
 #WORKDIR ./product-register
 CMD ["bash"]
