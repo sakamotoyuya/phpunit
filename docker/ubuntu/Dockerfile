@@ -21,6 +21,5 @@ RUN sudo apt-get install -y jenkins &&\
 # RUN tar -zxvf openjdk-11+28_linux-x64_bin.tar.gz -C /opt/jdk/
 # RUN rm -R openjdk-11+28_linux-x64_bin.tar.gz 
 
-RUN service jenkins start
 #WORKDIR ./product-register
 CMD ["bash"]
