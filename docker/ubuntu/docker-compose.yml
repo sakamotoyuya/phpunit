@@ -6,8 +6,9 @@ services:
     ports: #ポートを指定
       - '8080:8080'
       - '50000:50000'
-    volumes: #マウント先を指定する
-      - './jenkins_home:/var/jenkins_home'
+    # volumes: #マウント先を指定する
+      # - './jenkins_home:/var/lib/jenkins_home'
+      # - './jenkins:/var/lib/jenkins'
     tty: true  #これで-tの標準出力を指定
     stdin_open: true #これで-iの標準入力を指定
     command: "bash"

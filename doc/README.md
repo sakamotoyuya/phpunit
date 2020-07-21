@@ -20,6 +20,11 @@ docker-compose up -d
 docker-compose exec web bash
 ```
 停止する方法
+`docker-compose stop`  
+
+jenkinsの開始
+`service jenkins start`  
+IP:8080にアクセスすることでjenkins利用可能
 
 ## 備忘録
 jenkinsのインストール  
