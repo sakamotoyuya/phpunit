@@ -16,8 +16,10 @@ wget https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.
 ```
 cd ./docker/ubuntu/
 docker-compose build
+#これでjenkinsの起動まで実施可能
 docker-compose up -d
-docker-compose exec web bash
+#中に入りたいときはこっち
+docker-compose exec web bash 
 ```
 停止する方法
 `docker-compose stop`  
