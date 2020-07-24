@@ -11,5 +11,8 @@ services:
       # - './jenkins:/var/lib/jenkins'
     tty: true  #これで-tの標準出力を指定
     stdin_open: true #これで-iの標準入力を指定
-    command: "bash"
-
+    command: >
+      bash -c "
+        service jenkins start &&
+        /bin/bash
+      "

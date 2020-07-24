@@ -5,13 +5,14 @@ RUN apt-get install -y \
     sudo \
     gnupg \
     vim
-RUN echo "Set disable_coredump false" >> /etc/sudo.conf
-RUN wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
-RUN echo "deb https://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
-RUN sudo apt-get update
-RUN sudo apt-get install -y jenkins &&\
+# Jenkinsのインストール
+RUN echo "Set disable_coredump false" >> /etc/sudo.conf && \
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add - && \
+echo "deb https://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list && \
+sudo apt-get update && \
+sudo apt-get install -y jenkins && \
 # jdkは-yでインストールコマンドで入れることで解消する。
- sudo apt-get install -y openjdk-8-jdk
+sudo apt-get install -y openjdk-8-jdk
 
 # jdkをwget似て入れていたがこの方法だとうまく動かなかった
 # ADD openjdk-11+28_linux-x64_bin.tar.gz /opt/jdk/
