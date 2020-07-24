@@ -12,7 +12,8 @@ echo "deb https://pkg.jenkins.io/debian-stable binary/" >> /etc/apt/sources.list
 sudo apt-get update && \
 sudo apt-get install -y jenkins && \
 # jdkは-yでインストールコマンドで入れることで解消する。
-sudo apt-get install -y openjdk-8-jdk
+sudo apt-get install -y openjdk-8-jdk && \
+sudo apt-get install -y git
 
 # jdkをwget似て入れていたがこの方法だとうまく動かなかった
 # ADD openjdk-11+28_linux-x64_bin.tar.gz /opt/jdk/
