@@ -13,8 +13,12 @@ sudo apt-get update && \
 sudo apt-get install -y jenkins && \
 # jdkは-yでインストールコマンドで入れることで解消する。
 sudo apt-get install -y openjdk-8-jdk && \
-sudo apt-get install -y git
-
+sudo apt-get install -y git && \
+sudo apt-get install -y ruby && \
+sudo apt-get install -y gem && \
+gem install ultrahook
+#echo "api_key: 取得したAPIキー" > ~/.ultrahook
+#ultrahook stripe 8080
 # jdkをwget似て入れていたがこの方法だとうまく動かなかった
 # ADD openjdk-11+28_linux-x64_bin.tar.gz /opt/jdk/
 # ENV PATH /opt/jdk/jdk-11/bin:$PATH
