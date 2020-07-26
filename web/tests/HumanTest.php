@@ -15,6 +15,6 @@ final class SakamotoTest extends TestCase{
     }
     public function testD(){
         $obj = new Human();
-        $this->assertSame("おーまいっが！",$obj->goodnightString());
+        $this->assertSame("おーまいっが！!!!!!!!!",$obj->goodnightString());
     }
 }
