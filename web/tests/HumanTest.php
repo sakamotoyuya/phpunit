@@ -5,16 +5,16 @@ final class SakamotoTest extends TestCase{
         $obj = new Human();
         $this->assertSame("こんにちわ",$obj->helloString());
     }
-    public function testB(){
-        $obj = new Human();
-        $this->assertSame("おーまいっが！",$obj->goodnightString());
-    }
-    public function testC(){
-        $obj = new Human();
-        $this->assertSame("おーまいっが！",$obj->goodnightString());
-    }
+    // public function testB(){
+    //     $obj = new Human();
+    //     $this->assertSame("おーまいっが！",$obj->goodnightString());
+    // }
+    // public function testC(){
+    //     $obj = new Human();
+    //     $this->assertSame("おーまいっが！",$obj->goodnightString());
+    // }
     public function testD(){
         $obj = new Human();
-        $this->assertSame("おーまいっが！!!!!!!!!",$obj->goodnightString());
+        $this->assertSame("おやすみ",$obj->goodnightString());
     }
 }
