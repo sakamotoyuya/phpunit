@@ -18,6 +18,7 @@ sudo apt-get install -y ruby && \
 sudo apt-get install -y gem && \
 gem install ultrahook
 
+
 #echo "api_key: 取得したAPIキー" > ~/.ultrahook
 #ultrahook stripe 8080
 # jdkをwget似て入れていたがこの方法だとうまく動かなかった
