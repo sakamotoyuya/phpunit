@@ -34,6 +34,7 @@ jobs:
       # - run: find / -name composer.json
       - run: ls -a ~/project/
       - run: ls -a ~/project/web/
+      - run: cd ~/project/web/ 
       - run: composer install -n --prefer-dist
 
       - save_cache:
