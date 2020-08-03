@@ -31,9 +31,9 @@ jobs:
             - v1-dependencies-{{ checksum "composer.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: find / -name composer.json
-      - run: ll /home/circleci/circleci/project/web/
-      - run: ll /home/circleci/circleci/project/web/web/
+      # - run: find / -name composer.json
+      - run: ls -a /home/circleci/circleci/project/web/
+      - run: ls -a /home/circleci/circleci/project/web/web/
       - run: composer install -n --prefer-dist
 
       - save_cache:
