@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
   build:
+    environment:
+      DEBIAN_FRONTEND: noninteractive
     docker: 
       - image: ubuntu:latest # the primary container, where your job's commands are run
     steps:
