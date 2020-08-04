@@ -6,11 +6,5 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
-      - run: sudo apt-get update
-      # - run: sudo apt-get install -y \
-      #       wget \
-      #       sudo \
-      #       gnupg \
-      #       vim
-# Jenkinsのインストール
-      - run: sudo apt-get install -y php php-mbstring php-xml
+      - run: sudo -E apt-get update
+      - run: sudo -E apt-get install -y php php-mbstring php-xml
