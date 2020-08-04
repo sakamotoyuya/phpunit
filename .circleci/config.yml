@@ -13,7 +13,4 @@ jobs:
       #       gnupg \
       #       vim
 # Jenkinsのインストール
-      - run: sudo apt-get install -y \
-            php \
-            php-mbstring \
-            php-xml
+      - run: sudo apt-get install -y php php-mbstring php-xml
