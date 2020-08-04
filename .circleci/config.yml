@@ -8,5 +8,7 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y wget sudo gnupg vim
       - run: sudo apt-get update
-      - run: sudo apt-get install -y php php-mbstring php-xml
+      - run: sudo apt-get install -y php
+      - run: sudo apt-get install -y php-mbstring php-xml
+      - run: sudo apt-get install -y php-xml
       - run: php -v
