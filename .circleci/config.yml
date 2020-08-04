@@ -5,8 +5,8 @@ jobs:
       - image: ubuntu:latest # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      -run: apt-get update
-      -run: apt-get install -y wget sudo gnupg vim
-      -run: sudo apt-get update
-      -run: sudo apt-get install -y php php-mbstring php-xml
-      -run: php -v
+      - run: apt-get update
+      - run: apt-get install -y wget sudo gnupg vim
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y php php-mbstring php-xml
+      - run: php -v
