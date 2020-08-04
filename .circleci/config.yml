@@ -5,6 +5,10 @@ jobs:
     #   DEBIAN_FRONTEND: noninteractive
     docker: 
       - image: ubuntu:latest # the primary container, where your job's commands are run
+        environment:
+          TZ: "America/Los_Angeles"
+    environment:
+      TZ: "America/Los_Angeles"
     steps:
       - checkout # check out the code in the project directory
       - run: apt-get update
