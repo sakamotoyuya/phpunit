@@ -1,8 +1,8 @@
 version: 2.1
 jobs:
   build:
-    environment:
-      DEBIAN_FRONTEND: noninteractive
+    # environment:
+    #   DEBIAN_FRONTEND: noninteractive
     docker: 
       - image: ubuntu:latest # the primary container, where your job's commands are run
     steps:
@@ -10,6 +10,10 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y wget sudo gnupg vim
       - run: sudo apt-get update
+      # - run:
+      #   name: Setup Path
+      #   command: |
+      #     echo 'export DEBIAN_FRONTEND=noninteractive' >> $BASH_ENV
       - run: sudo apt-get install -y php
       # - run: sudo apt-get install -y php-mbstring
       # - run: sudo apt-get install -y php-xml
