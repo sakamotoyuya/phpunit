@@ -10,11 +10,11 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y wget sudo gnupg vim
       - run: sudo apt-get update
-      - run: export DEBIAN_FRONTEND=noninteractive
+      # - run: export DEBIAN_FRONTEND=noninteractive
       #   name: Setup Path
       #   command: |
       #     echo 'export DEBIAN_FRONTEND=noninteractive' >> $BASH_ENV
-      - sudo apt-get install -y php
+      - run: sudo apt install -y php
       # - run: sudo apt-get install -y php-mbstring
       # - run: sudo apt-get install -y php-xml
       - run: php -v
