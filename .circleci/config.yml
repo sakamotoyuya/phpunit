@@ -4,7 +4,7 @@ jobs:
     # environment:
     #   DEBIAN_FRONTEND: noninteractive
     docker: 
-      - image: ubuntu:17.10 # the primary container, where your job's commands are run
+      - image: ubuntu:latest # the primary container, where your job's commands are run
         # environment:
         #   TZ: "America/Los_Angeles"
     # environment:
@@ -18,6 +18,9 @@ jobs:
       #   name: Setup Path
       #   command: |
       #     echo 'export DEBIAN_FRONTEND=noninteractive' >> $BASH_ENV
+      - run: sudo apt-get install -y git
+      - run: sudo apt-get install -y ruby
+      - run: sudo apt-get install -y gem
       - run: sudo apt install -y php
       # - run: sudo apt-get install -y php-mbstring
       # - run: sudo apt-get install -y php-xml
