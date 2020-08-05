@@ -5,10 +5,12 @@ jobs:
     #   DEBIAN_FRONTEND: noninteractive
     docker: 
       - image: ubuntu:latest # the primary container, where your job's commands are run
-    #     environment:
-    #       TZ: "Asia/Tokyo"
-    # environment:
-    #   TZ: "Asia/Tokyo"
+        environment:
+          TZ: "Asia/Tokyo"
+          DEBIAN_FRONTEND: noninteractive
+    environment:
+      TZ: "Asia/Tokyo"
+      DEBIAN_FRONTEND: noninteractive
     steps:
       - checkout # check out the code in the project directory
       - run: apt-get update && apt-get install -y tzdata
