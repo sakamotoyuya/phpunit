@@ -5,22 +5,21 @@ jobs:
     #   DEBIAN_FRONTEND: noninteractive
     docker: 
       - image: ubuntu:latest # the primary container, where your job's commands are run
-        # environment:
-        #   TZ: "America/Los_Angeles"
-    # environment:
-    #   TZ: "America/Los_Angeles"
+        environment:
+          TZ: "Asia/Tokyo"
+    environment:
+      TZ: "Asia/Tokyo"
     steps:
       - checkout # check out the code in the project directory
-      - run: apt-get update
+      - run: apt-get update && apt-get install -y tzdata
       - run: apt-get install -y wget sudo gnupg vim
       - run: sudo apt-get update
+      - run: sudo apt-get upgrade -y
       # - run: export DEBIAN_FRONTEND=noninteractive
       #   name: Setup Path
       #   command: |
       #     echo 'export DEBIAN_FRONTEND=noninteractive' >> $BASH_ENV
-      - run: sudo apt-get install -y git
-      - run: sudo apt-get install -y ruby
-      - run: sudo apt-get install -y gem
+      # - run: sudo apt-get install -y git
       - run: sudo apt install -y php
       # - run: sudo apt-get install -y php-mbstring
       # - run: sudo apt-get install -y php-xml
