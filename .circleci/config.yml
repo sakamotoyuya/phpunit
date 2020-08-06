@@ -23,8 +23,10 @@ jobs:
       - run: sudo apt install -y php
       - run: sudo apt-get install -y php-mbstring
       - run: sudo apt-get install -y php-xml
+      - run: sudo apt-get install -y zip
+      - run: sudo apt-get install -y unzip
       # - run: php -v
       - run: echo "Set disable_coredump false" >> /etc/sudo.conf
       - run: sudo cp ./doc/composer ./web/
       - run: ls -la ./web/
-      - run: cd web && ls -la && php ./composer update && php ./composer install && ./vendor/bin/phpunit tests
+      - run: cd web && ls -la && php ./composer -v && php ./composer install && ./vendor/bin/phpunit tests
