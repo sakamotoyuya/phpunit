@@ -24,7 +24,7 @@ jobs:
       - run: sudo apt-get install -y php-mbstring
       - run: sudo apt-get install -y php-xml
       # - run: php -v
-      - run: pwd
-      - run: ls -la
-      - run: find / -name phpunit
-
+      - run: sudo cp ./doc/composer ./web/
+      - run: php ./web/composer install
+      - run: cd web
+      - run: ./vendor/bin/phpunit tests
