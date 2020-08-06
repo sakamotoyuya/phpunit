@@ -27,9 +27,8 @@ jobs:
       - run: echo "Set disable_coredump false" >> /etc/sudo.conf
       - run: sudo cp ./doc/composer ./web/
       - run: ls -la ./web/
-      - run: cd web
-      - run: pwd
-      - run: ls -la
-      - run: php composer update
-      - run: php composer install
-      - run: ./vendor/bin/phpunit tests
+      - run: |
+        cd web &&
+        ls -la &&
+        php ./composer install &&
+        ./vendor/bin/phpunit tests
